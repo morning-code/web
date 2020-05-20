@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+$color-white-primary: #e4e6eb;
+$color-white: #b0b3b8;
+$color-black: #18191b;
+$color-gray: #3a3b3b;
+$color-dark-gray: #1c1e21;
+$color-light-gray: #828282;
+$color-sky-blue: #0bd;
+$color-dark-sky-blue: #0090aa;
+
+body {
+  background-color: $color-black;
+}
+
+a {
+  color: $color-white-primary;
+  text-decoration: none;
+}

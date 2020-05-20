@@ -9,7 +9,7 @@ export class IndexService {
 
   constructor(private http: HttpClient) { }
 
-  private url = 'http://localhost:8080';
+  private url = 'http://localhost:9080';
 
   get(): Promise<any[]> {
     return this.http.get(this.url).toPromise()

@@ -10,7 +10,7 @@ export class IndexComponent implements OnInit {
 
   constructor(private indexService: IndexService) { }
 
-  private response: any = {};
+  public response: any = {};
 
   ngOnInit(): void {
     this.getIndex();

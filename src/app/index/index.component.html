@@ -1,5 +1,11 @@
-<h1>{{ response.message }}</h1>
-<p>index works!</p>
-<div id="content">
-
+<div class="content">
+  <article class="card" *ngFor="let blog of response.blogs">
+    <section class="card-img">
+      <img src="../../assets/images/coffee256px.png">
+    </section>
+    <section class="card-content">
+      <h1 class="card-title">{{ blog.title }}</h1>
+      <p class="card-text">{{ blog.detail }}</p>
+    </section>
+  </article>
 </div>
