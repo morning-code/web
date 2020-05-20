@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IndexService } from './index.service';
 
 @Component({
@@ -8,7 +9,10 @@ import { IndexService } from './index.service';
 })
 export class IndexComponent implements OnInit {
 
-  constructor(private indexService: IndexService) { }
+  constructor(
+    private indexService: IndexService,
+    private router: Router
+  ) { }
 
   public response: any = {};
 
@@ -29,4 +33,7 @@ export class IndexComponent implements OnInit {
       );
   }
 
+  onClickCard(blogId: String) {
+    this.router.navigate(['/blog', blogId]);
+  }
 }
