@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { BlogService } from './blog.service';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {BlogService} from './blog.service';
 
 @Component({
   selector: 'app-blog',
@@ -21,7 +21,7 @@ export class BlogComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private blogService: BlogService
   ) {
-    const { snapshot } = this.route;
+    const {snapshot} = this.route;
     this.id = snapshot.params.id;
     console.log(this.id)
   }
@@ -31,19 +31,31 @@ export class BlogComponent implements OnInit {
   }
 
   getBlog(blogId: String) {
-     this.blogService.get(blogId)
-        .then(
-          (response) => {
-            this.response = response;
-            const html = response['html'];
-            this.html = this.sanitizer.bypassSecurityTrustHtml(html);
-            //this.html = '<pre><code>print_r("Hello World.");</code></pre>';
-            console.log(this.response)
-          }
-        )
-        .catch(
-          (error) => console.log(error)
-        );
+    this.blogService.get(blogId)
+      .then(
+        (response) => {
+          this.response = response;
+          const html = response['html'];
+          this.html = this.sanitizer.bypassSecurityTrustHtml(html);
+          // NOTE: for debug
+          //this.html = '<pre class="prettyprint"><code>$ echo \'foo\';</code></pre>'
+          //console.log(this.response);
+        }
+      )
+      .catch(
+        (error) => console.log(error)
+      );
+  }
+
+  ngAfterViewChecked(): void {
+    this.setPrettyPrint();
+  }
+
+  setPrettyPrint() {
+    Array.prototype.slice.call(document.querySelectorAll("pre")).forEach(function (pre) {
+      pre.setAttribute("class", "prettyprint");
+    });
+    PR.prettyPrint();
   }
 
 }
