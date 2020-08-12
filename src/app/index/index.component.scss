@@ -1,6 +1,6 @@
 @import '../../styles.scss';
 
-.content {
+.container {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
@@ -19,35 +19,42 @@
   //box-shadow: 0 4px 8px $color-light-gray;
   flex: 1 1 auto;
 }
+
 .card-img {
   border-radius: 4px 4px 0 0;
   max-width: 100%;
   height: auto;
 }
+
 .card-content {
   margin: 8px;
 }
+
 .card-title {
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
   color: $color-white-primary;
 }
+
 .card-text {
   color: $color-white;
   font-size: 14px;
   line-height: 1.5;
 }
+
 .card-link {
   text-align: center;
   border-top: 0px;
   padding: 20px;
 }
+
 .card-link a {
   text-decoration: none;
   color: $color-sky-blue;
   margin: 8px;
 }
+
 .card-link a:hover {
   color: $color-dark-sky-blue;
 }

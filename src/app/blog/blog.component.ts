@@ -5,8 +5,8 @@ import {BlogService} from './blog.service';
 
 @Component({
   selector: 'app-blog',
-  template: '<div [innerHTML]="html"></div>',
-  //templateUrl: './blog.component.html',
+  //template: '<div [innerHTML]="html"></div>',
+  templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
@@ -14,7 +14,6 @@ export class BlogComponent implements OnInit {
   private id: String;
   public response: any = {};
   html: SafeHtml;
-
 
   constructor(
     private route: ActivatedRoute,

@@ -1,8 +1,31 @@
 @import '../../styles.scss';
 
+div.container {
+  padding: 4px 128px 4px 128px;
+}
+
+div.container__inner {
+  background-color: $color-gray;
+  border-radius: 8px;
+}
+
+div.container__blog {
+  background-color: $color-gray;
+  padding: 4px 0px 4px 16px;
+  border-radius: 8px;
+}
+
+/*
+div.container {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+ */
+
 .prettyprint {
-//  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-//  background-color: $color-black;
+  //  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  //  background-color: $color-black;
   color: $color-black;
 }
 
