@@ -2,6 +2,12 @@
 
 div.container {
   padding: 4px 128px 4px 128px;
+
+  /*
+  > h1 {
+    border-bottom: solid 2px #fec243;
+  }
+   */
 }
 
 div.container__inner {
@@ -11,21 +17,7 @@ div.container__inner {
 
 div.container__blog {
   background-color: $color-gray;
-  padding: 4px 0px 4px 16px;
+  padding: 24px 48px 24px 48px;
+  margin-bottom: 32px;
   border-radius: 8px;
 }
-
-/*
-div.container {
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
- */
-
-.prettyprint {
-  //  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  //  background-color: $color-black;
-  color: $color-black;
-}
-
