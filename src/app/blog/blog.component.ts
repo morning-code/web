@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import {BlogService} from './blog.service';
 

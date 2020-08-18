@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { IndexService } from './index.service';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {IndexService} from './index.service';
 
 @Component({
   selector: 'app-index',
@@ -12,7 +12,8 @@ export class IndexComponent implements OnInit {
   constructor(
     private indexService: IndexService,
     private router: Router
-  ) { }
+  ) {
+  }
 
   public response: any = {};
 
@@ -33,7 +34,7 @@ export class IndexComponent implements OnInit {
       );
   }
 
-  onClickCard(blogId: String) {
-    this.router.navigate(['/blog', blogId['id']]);
+  onClickCard(blog: any) {
+    this.router.navigate(['/blog', blog.id.id]);
   }
 }

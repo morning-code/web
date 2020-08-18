@@ -1,11 +1,11 @@
 <div class="container">
-  <article class="card" *ngFor="let blog of response.blogs" (click)=onClickCard(blog.id)>
+  <article class="card" *ngFor="let blog of response.blogs" (click)=onClickCard(blog)>
     <section class="card-img">
       <img src="../../assets/images/coffee256px.png">
     </section>
     <section class="card-content">
-      <h1 class="card-title">{{ blog.title }}</h1>
-      <p class="card-text">{{ blog.detail }}</p>
+      <h4 class="card-title">{{ blog.title }}</h4>
+      <p class="card-text">{{ blog.summary }}</p>
     </section>
   </article>
 </div>
