@@ -34,6 +34,6 @@ export class IndexComponent implements OnInit {
   }
 
   onClickCard(blogId: String) {
-    this.router.navigate(['/blog', blogId]);
+    this.router.navigate(['/blog', blogId['id']]);
   }
 }

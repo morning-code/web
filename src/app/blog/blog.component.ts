@@ -1,7 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, ParamMap} from '@angular/router';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import {BlogService} from './blog.service';
+
+// google-code-prettify
+declare var PR: any;
 
 @Component({
   selector: 'app-blog',
@@ -54,7 +57,7 @@ export class BlogComponent implements OnInit {
     Array.prototype.slice.call(document.querySelectorAll("pre")).forEach(function (pre) {
       pre.setAttribute("class", "prettyprint");
     });
+
     PR.prettyPrint();
   }
-
 }
